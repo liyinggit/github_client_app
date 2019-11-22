@@ -23,17 +23,33 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
-  json_annotation: ^2.2.0
   #用于数据存储，实现数据持久化
   shared_preferences: "^0.4.2"
+  #缓存策略
+  dio: ^3.0.5
+  #图片缓存
+  cached_network_image: ^1.1.3
+  #支持多语言
+  intl: 0.15.8
+  #实现toast效果
+  fluttertoast: ^3.0.3
+  #flukit （Flutter UI Kit）是一个Flutter Widget库
+  flukit: ^1.0.2
+  #国际化
+  flutter_localizations:
+    sdk: flutter
+  #状态管理
+  provider: ^3.0.0+1
+
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   #生成Dart Model类
-  json_model: #latest version
+  json_model: ^0.0.2
   build_runner: ^1.0.0
   json_serializable: ^2.0.0
+  intl_translation: ^0.17.4
 
 
 # For information on the generic Dart part of this file, see the
@@ -48,9 +64,10 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #  - images/a_dot_burr.jpeg
-  #  - images/a_dot_ham.jpeg
+  assets:
+    - imgs/avatar-default.png
+    - imgs/logo_light.png
+    - imgs/logo_dark.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
@@ -63,6 +80,10 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
+  fonts:
+    - family: myIcon
+      fonts:
+        - asset: fonts/iconfont.ttf
   # fonts:
   #   - family: Schyler
   #     fonts:
