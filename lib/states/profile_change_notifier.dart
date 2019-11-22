@@ -1,5 +1,6 @@
 import '../index.dart';
 
+///共享状态
 class ProfileChangeNotifier extends ChangeNotifier {
   Profile get _profile => Global.profile;
 

@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:github_client_app/models/repo.dart';
 import 'package:github_client_app/models/user.dart';
 import 'Global.dart';
-
+///封装网络请求
 class Git {
   // 在网络请求过程中可能会需要使用当前的context信息，比如在请求失败时
   // 打开一个新路由，而打开新路由需要context信息。

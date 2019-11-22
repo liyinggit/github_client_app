@@ -4,6 +4,7 @@ import 'package:dio/dio.dart';
 
 import 'Global.dart';
 
+///网络结果缓存
 class CacheObject {
   CacheObject(this.response)
       : timeStamp = DateTime.now().millisecondsSinceEpoch;
@@ -20,7 +21,7 @@ class CacheObject {
   int get hashCode => response.realUri.hashCode;
 }
 
-
+///缓存策略
 class NetCache extends Interceptor {
   // 为确保迭代器顺序和对象插入时间一致顺序一致，我们使用LinkedHashMap
   var cache = LinkedHashMap<String, CacheObject>();

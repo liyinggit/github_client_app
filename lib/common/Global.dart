@@ -17,6 +17,7 @@ const _themes = <MaterialColor>[
   Colors.red,
 ];
 
+///全局变量 global类
 class Global {
   //持久化信息
   static SharedPreferences _prefs;

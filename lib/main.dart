@@ -45,6 +45,7 @@ class MyApp extends StatelessWidget {
               // 本地化的代理类
               GlobalMaterialLocalizations.delegate,
               GlobalWidgetsLocalizations.delegate,
+              // 注册我们的Delegate
               GmLocalizationsDelegate()
             ],
             localeResolutionCallback:

@@ -18,6 +18,7 @@ class GmLocalizations {
     return Localizations.of<GmLocalizations>(context, GmLocalizations);
   }
 
+  //Locale相关值，title为应用标题
   String get title {
     return Intl.message(
       'Flutter APP',
@@ -25,7 +26,7 @@ class GmLocalizations {
       desc: 'Title for the Demo application',
     );
   }
-
+  //其他的值
   String get home => Intl.message('Github', name: 'home');
 
   String get language => Intl.message('Language', name: 'language');
