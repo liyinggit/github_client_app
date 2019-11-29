@@ -3,12 +3,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
+//使用{}表示是可选的命名参数，里面内容可选，并且要指定名字和值
 Widget gmAvatar(String url, {
   double width = 30,
   double height,
   BoxFit fit,
   BorderRadius borderRadius,
 }) {
+
+  //var 为可变的，并且类型一旦确定不能改动，final  和const不能改变
   var placeholder = Image.asset(
       "imgs/avatar-default.png", //头像默认值
       width: width,
@@ -27,19 +30,22 @@ Widget gmAvatar(String url, {
   );
 }
 
+//使用{}表示是可选的命名参数，里面内容可选，并且要指定名字和值
 void showToast(String text, {
   gravity: ToastGravity.CENTER,
   toastLength: Toast.LENGTH_SHORT,
 }) {
   Fluttertoast.showToast(
     msg: text,
-    toastLength: Toast.LENGTH_SHORT,
-    gravity: ToastGravity.BOTTOM,
+    toastLength: toastLength,
+    gravity: gravity,
     timeInSecForIos: 1,
     backgroundColor: Colors.grey[600],
     fontSize: 16.0,
   );
 }
+
+//使用 【】表示的是可选参数，放在最后面
 void showLoading(context, [String text]) {
   text = text ?? "Loading...";
   showDialog(

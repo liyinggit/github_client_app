@@ -14,6 +14,7 @@ class ProfileChangeNotifier extends ChangeNotifier {
 class UserModel extends ProfileChangeNotifier {
   User get user => _profile.user;
 
+  //只宝行一个表达式的函数，可以使用简写语法
   // APP是否登录(如果有用户信息，则证明登录过)
   bool get isLogin => user != null;
 

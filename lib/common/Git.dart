@@ -45,6 +45,7 @@ class Git {
     }
   }
 
+  //一个Future只会对应一个结果，要么成功，要么失败
   // 登录接口，登录成功后返回用户信息
   Future<User> login(String login, String pwd) async {
     String basic = 'Basic ' + base64.encode(utf8.encode('$login:$pwd'));
@@ -80,4 +81,6 @@ class Git {
     );
     return r.data.map((e) => Repo.fromJson(e)).toList();
   }
+
+
 }
